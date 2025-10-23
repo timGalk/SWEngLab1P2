@@ -12,7 +12,10 @@ public class Calculator {
         return a * b;
     }
     public double divide(int a, int b) {
-        return (double) a / b; // no division by zero check yet
+        if (b == 0) {
+            throw new IllegalArgumentException("Division by zero is not allowed!");
+        }
+        return (double) a / b;
     }
 
 
